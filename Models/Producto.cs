@@ -16,7 +16,7 @@ namespace Tienda.Models
 
         public override string ToString()
         {
-            return $"{Id}) {Nombre} precio {Precio}MXN";
+            return $"{Id}) {Nombre} precio {Precio:N2}MXN";
 
         }
     }

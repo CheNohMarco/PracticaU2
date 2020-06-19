@@ -11,5 +11,10 @@ namespace Tienda.Models
         public DateTime Fecha { get; set; }
         public string Cliente { get; set; }
         public virtual ICollection<Detalle> Detalles { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id}) {Cliente} total  {Total:N2}MXN";
+        }
     }
 }
