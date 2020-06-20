@@ -35,3 +35,40 @@ C:\Users\che_n\source\repos\Tienda\obj\Debug\netcoreapp3.1\Tienda.csproj.CoreCom
 C:\Users\che_n\source\repos\Tienda\obj\Debug\netcoreapp3.1\Tienda.dll
 C:\Users\che_n\source\repos\Tienda\obj\Debug\netcoreapp3.1\Tienda.pdb
 C:\Users\che_n\source\repos\Tienda\obj\Debug\netcoreapp3.1\Tienda.genruntimeconfig.cache
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Tienda.exe
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Tienda.deps.json
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Tienda.runtimeconfig.json
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Tienda.runtimeconfig.dev.json
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Tienda.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Tienda.pdb
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\obj\Debug\netcoreapp3.1\Tienda.csprojAssemblyReference.cache
+C:\Users\Mich FsGz\source\repos\PracticaU2\obj\Debug\netcoreapp3.1\Tienda.AssemblyInfoInputs.cache
+C:\Users\Mich FsGz\source\repos\PracticaU2\obj\Debug\netcoreapp3.1\Tienda.AssemblyInfo.cs
+C:\Users\Mich FsGz\source\repos\PracticaU2\obj\Debug\netcoreapp3.1\Tienda.csproj.CoreCompileInputs.cache
+C:\Users\Mich FsGz\source\repos\PracticaU2\obj\Debug\netcoreapp3.1\Tienda.csproj.CopyComplete
+C:\Users\Mich FsGz\source\repos\PracticaU2\obj\Debug\netcoreapp3.1\Tienda.dll
+C:\Users\Mich FsGz\source\repos\PracticaU2\obj\Debug\netcoreapp3.1\Tienda.pdb
+C:\Users\Mich FsGz\source\repos\PracticaU2\obj\Debug\netcoreapp3.1\Tienda.genruntimeconfig.cache
