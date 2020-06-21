@@ -12,12 +12,13 @@ namespace Tienda.Clases
         public void Menu()
         {
             Console.WriteLine("============================");
-            Console.WriteLine("||           Menu         ||");
+            Console.WriteLine("||      Menu  detalle     ||");
             Console.WriteLine("============================");
             Console.WriteLine("||   1) Buscar detalle    ||");
             Console.WriteLine("||   2) Crear detalle     ||");
             Console.WriteLine("||  3) Eliminar detalle   ||");
             Console.WriteLine("|| 4) Actualizar detalle  ||");
+            Console.WriteLine("||  5) Regresar al menu   ||");
             Console.WriteLine("||       0) Salir         ||");
             Console.WriteLine("============================");
 
@@ -36,72 +37,138 @@ namespace Tienda.Clases
                 case "4":
                     Eliminar();
                     break;
+                case "5":
+                    Program p = new Program();
+                    p.menu();
+                    break;
                 case "0": return;
+                default:
+                    Console.WriteLine("Introduzca una opción valida");
+                    Menu();
+                    break;
             }
             Menu();
         }
         public void Buscar()
         {
-            Console.WriteLine("Buscar detalle");
-            Console.Write("Buscar: ");
-            string buscar = Console.ReadLine();
-
-            using (TiendaContext tiendaContext = new TiendaContext())
+            try
             {
-                IQueryable<Detalle> detalles = tiendaContext.Detalles.Where(d => d.Producto.Nombre.Contains(buscar));
-                foreach (Detalle detalle in detalles)
+                Console.WriteLine("Buscar detalle");
+                Console.Write("Buscar: ");
+                string buscar = Console.ReadLine();
+
+                using (TiendaContext tiendaContext = new TiendaContext())
                 {
-                    Console.WriteLine(detalles);
+                    IQueryable<Detalle> detalles = tiendaContext.Detalles.Where(d => d.Producto.Nombre.Contains(buscar));
+                    if (detalles.Count() == 0)
+                    {
+                        Console.WriteLine("No se obtuvieron resultado en la busqueda");
+                        Buscar();
+                    }
+                    else
+                    {
+
+                        foreach (Detalle detalle in detalles)
+                        {
+                            Console.WriteLine(detalles);
+                        }
+
+                    }
                 }
+
+            }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine("Ocurrio un error de conexión");
+                Buscar();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Ocurrio un error en el proceso. Intente buscar el detalle nuevamente");
+                Buscar();
             }
         }
 
         public void Crear()
         {
-            Console.WriteLine("Crear detalle");
-            Detalle detalle = new Detalle();
-            detalle = LlenarDetalle(detalle);
-
-            using (TiendaContext tiendaContext = new TiendaContext())
+            try
             {
-                try
+                Console.WriteLine("Crear detalle");
+                Detalle detalle = new Detalle();
+                detalle = LlenarDetalle(detalle);
+
+                using (TiendaContext tiendaContext = new TiendaContext())
                 {
+
                     tiendaContext.Add(detalle);
                     tiendaContext.SaveChanges();
                     Console.WriteLine("Detalle creado");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Error al crear detalle: verifique la información introducida y vuelva a intenta");
-                    Menu();
+
                 }
             }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine("Ocurrio un error de conexión");
+                Crear();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Ocurrio un error en el proceso. Intente crear el detalle nuevamente");
+                Crear();
+            }
+
         }
 
         public void Editar()
         {
-            Console.WriteLine("Actualizar detalle");
-            Detalle detalle = SeleccionarDetalle();
-            detalle = LlenarDetalle(detalle);
-
-            using (TiendaContext tiendaContext = new TiendaContext())
+            try
             {
-                tiendaContext.Update(detalle);
-                tiendaContext.SaveChanges();
-                Console.WriteLine("Detalle actualizado exitosamente");
+                Console.WriteLine("Actualizar detalle");
+                Detalle detalle = SeleccionarDetalle();
+                detalle = LlenarDetalle(detalle);
+
+                using (TiendaContext tiendaContext = new TiendaContext())
+                {
+                    tiendaContext.Update(detalle);
+                    tiendaContext.SaveChanges();
+                    Console.WriteLine("Detalle actualizado exitosamente");
+                }
+            }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine("Ocurrio un error de conexión");
+                Buscar();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Ocurrio un error en el proceso. Intente actualizar el detalle nuevamente");
+                Editar();
             }
         }
 
         public void Eliminar()
         {
-            Console.WriteLine("Eliminar detalle");
-            Detalle detalle = SeleccionarDetalle();
-
-            using (TiendaContext tiendaContext = new TiendaContext())
+            try
             {
-                tiendaContext.Remove(detalle);
-                tiendaContext.SaveChanges();
-                Console.WriteLine("Detalle eliminado exitosamente :)");
+                Console.WriteLine("Eliminar detalle");
+                Detalle detalle = SeleccionarDetalle();
+
+                using (TiendaContext tiendaContext = new TiendaContext())
+                {
+                    tiendaContext.Remove(detalle);
+                    tiendaContext.SaveChanges();
+                    Console.WriteLine("Detalle eliminado exitosamente :)");
+                }
+            }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine("Ocurrio un error de conexión");
+                Eliminar();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Ocurrio un error en el proceso. Intente eliminar el detalle nuevamente");
+                Eliminar();
             }
         }
 
@@ -140,6 +207,7 @@ namespace Tienda.Clases
                 Detalle detalle = tiendaContext.Detalles.Find(id);
                 if (detalle == null)
                 {
+                    Console.WriteLine("Selecciona el código correcto");
                     SeleccionarDetalle();
                 }
                 return detalle;

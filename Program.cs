@@ -24,7 +24,7 @@ namespace Tienda
             Console.WriteLine("||                        ||");
             Console.WriteLine("||        1) Entrar       ||");
             Console.WriteLine("||    2) Crear usuario    ||");
-            Console.WriteLine("||                        ||");
+            Console.WriteLine("||        0) Salir        ||");
             Console.WriteLine("============================");
 
             Usuarios u = new Usuarios();
@@ -48,12 +48,14 @@ namespace Tienda
         public void menu()
         {
             Console.WriteLine("============================");
-            Console.WriteLine("||        Bienvenido      ||");
+            Console.WriteLine("||           Menú         ||");
             Console.WriteLine("============================");
             Console.WriteLine("||                        ||");
-            Console.WriteLine("||        1) Productos    ||");
-            Console.WriteLine("||       2) Ventas        ||");
-            Console.WriteLine("||       3) Detalles      ||");
+            Console.WriteLine("||      1) Productos      ||");
+            Console.WriteLine("||        2) Ventas       ||");
+            Console.WriteLine("||      3) Detalles       ||");
+            Console.WriteLine("||  4) Regresar al menú   ||");
+            Console.WriteLine("||        0) Salir        ||");
             Console.WriteLine("============================");
 
            
@@ -72,10 +74,13 @@ namespace Tienda
                     Detalles d = new Detalles();
                     d.Menu();
                     break;
+                case "4":
+                    Bienvenido();
+                    break;
                 case "0": return;
                 default:
                     Console.WriteLine("Introduzca una opción valida");
-                    Bienvenido();
+                    menu();
                     break;
             }
         }

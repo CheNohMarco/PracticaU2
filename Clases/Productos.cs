@@ -11,12 +11,13 @@ namespace Tienda.Clases
         public void Menu()
         {
             Console.WriteLine("============================");
-            Console.WriteLine("||           Menu         ||");
+            Console.WriteLine("||      Menú producto     ||");
             Console.WriteLine("============================");
             Console.WriteLine("||   1) Buscar producto   ||");
             Console.WriteLine("||   2) Crear producto    ||");
             Console.WriteLine("||  3) Eliminar producto  ||");
             Console.WriteLine("|| 4) Actualizar producto ||");
+            Console.WriteLine("|| 5) Regresar al menu    ||");
             Console.WriteLine("||       0) Salir         ||");
             Console.WriteLine("============================");
 
@@ -35,7 +36,15 @@ namespace Tienda.Clases
                 case "4":
                     Editar();
                     break;
+                case "5":
+                    Program p = new Program();
+                    p.menu();
+                    break;
                 case "0": return;
+                default:
+                    Console.WriteLine("Introduzca una opción valida");
+                    Menu();
+                    break;
             }
             Menu();
         }
@@ -169,6 +178,7 @@ namespace Tienda.Clases
                 Producto producto = context.Productos.Find(id);
                 if (producto == null)
                 {
+                    Console.WriteLine("Selecciona el código correcto");
                     SeleccionarProducto();
                 }
                 return producto;
@@ -192,9 +202,15 @@ namespace Tienda.Clases
                 Console.Write("Tamaño: ");
                 producto.Tamano = Console.ReadLine();
             }
+            
             catch (FormatException e)
             {
                 Console.WriteLine("No es el formato correcto:( Intente crear el producto nuevamente");
+                Crear();
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine("Intente crear el producto nuevamente");
                 Crear();
             }
             catch (Exception e)
