@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Tienda.Models
 {
-    class Detalle
+    public class Detalle
     {
         public uint Id { get; set; }
         public uint ProductoId { get; set; }
