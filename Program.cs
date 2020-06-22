@@ -37,7 +37,9 @@ namespace Tienda
                 case "2":
                     u.CrearUsuario();
                     break;
-                case "0": return;
+                case "0": 
+                    Environment.Exit(0);
+                    break;
                 default:
                     Console.WriteLine("Introduzca una opción valida");
                     Bienvenido();
@@ -77,7 +79,9 @@ namespace Tienda
                 case "4":
                     Bienvenido();
                     break;
-                case "0": return;
+                case "0":
+                    Environment.Exit(0);
+                    break;
                 default:
                     Console.WriteLine("Introduzca una opción valida");
                     menu();
